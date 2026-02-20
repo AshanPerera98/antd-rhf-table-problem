@@ -7,6 +7,8 @@ import {
   useEffect,
   memo,
 } from "react";
+import { downloadCSV } from "../utils/csv-download";
+import { Button } from "antd";
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const PAGE_SIZE = 100;
@@ -367,6 +369,13 @@ export default function DataTableEditor() {
           </svg>
           <span className="header-title">DataGrid Pro</span>
         </div>
+        <Button
+          className="btn-upload"
+          onClick={() => downloadCSV("/data/data_2.csv", "data_2.csv")}
+          style={{ marginRight: 16 }}
+        >
+          Download CSV
+        </Button>
         <div className="header-actions">
           <input
             ref={fileRef}
