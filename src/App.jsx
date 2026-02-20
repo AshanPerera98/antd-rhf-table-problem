@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import Home from "./home/home";
 import AntdTable from "./antd-table/antd-table";
 import ReactHookFormTable from "./rhf-table/rhf-table";
+import EditableProTable from "./editable-pro-table/editable-pro-table";
 
 import React, { useState, useEffect } from "react";
 
@@ -10,11 +11,13 @@ const tabKeyToHash = {
   1: "#home",
   2: "#antd",
   3: "#rhf",
+  4: "#editable",
 };
 const hashToTabKey = {
   "#home": "1",
   "#antd": "2",
   "#rhf": "3",
+  "#editable": "4",
 };
 
 function App() {
@@ -47,6 +50,9 @@ function App() {
         </Tabs.TabPane>
         <Tabs.TabPane tab="ReactHookFormTable" key="3">
           <ReactHookFormTable />
+        </Tabs.TabPane>
+        <Tabs.TabPane tab="Editable Pro Table" key="4">
+          <EditableProTable />
         </Tabs.TabPane>
       </Tabs>
     </>
