@@ -4,7 +4,6 @@ import {
   useCallback,
   useMemo,
   useRef,
-  useEffect,
   memo,
 } from "react";
 import { downloadCSV } from "../utils/csv-download";
